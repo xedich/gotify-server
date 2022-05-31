@@ -1,0 +1,7 @@
+{
+  "name": "gotify-ui",
+  "version": "0.1.0",
+  "scripts": {
+    "postinstall": "npm install --dev --prefix ui && npm run build --prefix ui"
+  }
+}
