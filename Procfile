@@ -1,1 +1,1 @@
-web: GOTIFY_SERVER_PORT=$PORT server
+web: bin/litestream restore -v -if-db-not-exists -if-replica-exists -o data/gotify.db "${DB_REPLICA_URL}" && GOTIFY_SERVER_PORT=$PORT bin/litestream replicate -exec "server" "data/gotify.db" "${DB_REPLICA_URL}"

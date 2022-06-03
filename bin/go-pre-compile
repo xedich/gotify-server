@@ -1,3 +1,4 @@
 #!/bin/bash
+go install github.com/benbjohnson/litestream/cmd/litestream@v0.3.8
 go run hack/packr/packr.go
 export LD_FLAGS="-w -s -X main.Version=$(git describe --tags | cut -c 2-) -X main.BuildDate=$(date "+%F-%T") -X main.Commit=$(git rev-parse --verify HEAD) -X main.Mode=prod"
